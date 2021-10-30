@@ -207,3 +207,126 @@ print(type(c))
 
 #   Don't forget to "import random" up top for this!
 print(random.randrange(1, 10))
+
+#   Casting stuff to int AND FLOATS DROP DECIMAL, DON'T ROUND
+#   SAME AS JAVA!
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
+
+x = float(1)     # x will be 1.0
+y = float(2.8)   # y will be 2.8
+z = float("3")   # z will be 3.0
+w = float("4.2") # w will be 4.2
+
+x = str("s1") # x will be 's1'
+y = str(2)    # y will be '2'
+z = str(3.0)  # z will be '3.0'
+
+#   Can assign a multiline string to a variable by using 3 quotes:
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)
+
+#   The first char in the string is a[0]:
+a = "Hello, World!"
+print(a[1])
+
+#   A for-loop that prints each char in the str:
+for x in "banana":
+  print(x)
+  
+#   .length() in Python is len()
+a = "Hello, World!"
+print(len(a)) 
+
+#   "in" is kind of like indexOf() in JS, but false instead of -1:
+txt = "The best things in life are free!"
+print("free" in txt)
+
+txt = "The best things in life are free!"
+if "free" in txt:
+  print("Yes, 'free' is present.")
+  
+#   "not in":
+txt = "The best things in life are free!"
+if "expensive" not in txt:
+  print("No, 'expensive' is NOT present.")
+
+#   Get the chars from position 2 to position 5 (not included):
+#   Wow, this syntax is even shorter than JS slice()/splice()!
+#   This is considered a Python slice(), unclear if 
+#   Python also has a splice() that modifies the existing array...
+#   although this is a String, and programming languages 
+#   don't usually let you modify individual characters 
+#   of strings like that.
+b = "Hello, World!"
+print(b[2:5])
+
+#   If u don't specify the first index, starts at 0:
+b = "Hello, World!"
+print(b[:5])
+
+#   If u don't specify the last index, goes to len():
+b = "Hello, World!"
+print(b[2:])
+
+#   Neg indexes reverse the direction, goes from end to start:
+b = "Hello, World!"
+print(b[-5:-2])
+
+#   Pretty standard string methods below that most langs have:
+a = "Hello, World!"
+print(a.upper())
+
+a = "Hello, World!"
+print(a.lower())
+
+#   This removes whitespace before and after words:
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
+
+#   Oh, here's a char replacement in a str!
+a = "Hello, World!"
+print(a.replace("H", "J"))
+
+#   Splits a str into an array (list?) of strs on delimiter:
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!']
+
+#   Darn, can't just plop an int into a string and have it 
+#   cast to a str like in Java. Need formatting like Swift:
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+
+#   Literally filling in the blanks with int and float:
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price))
+
+#   Re-ordering the format params:
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price))
+
+#   Can escape things w "\", pretty standard:
+txt = "We are the so-called \"Vikings\" from the north."
+
+#   \n for "new line"
+
+#   Check out the "String Methods" tab. There's index(), 
+#   find() (indexOf()), and more.
+
