@@ -1,5 +1,7 @@
 # Online Python compiler (interpreter) to run Python online.
 # Write Python 3 code in this online editor and run it.
+import random
+
 print("Hello world")
 
 #   This indentation is fine.
@@ -117,3 +119,91 @@ myfunc()
 
 print("Python is " + x)
 
+#   String:
+x = "Hello World"
+
+#   Int:
+x = 20
+
+#   Float:
+x = 20.5
+
+#   Complex?! What even is this? It's not Hexadecimal, so huh?
+x = 1j
+
+#  List, which I'm assuming is like an array in Java:
+x = ["apple", "banana", "cherry"]
+
+#   Tuple? Is this an Enumeration?
+x = ("apple", "banana", "cherry")
+
+# This is a Range... so maybe the ints 1-6 or 0-6?
+x = range(6)
+
+#   Dictionary, which is like a HashMap in C# but a JS object here?
+x = {"name" : "John", "age" : 36}
+
+#   A Set, so is this a HashSet? Or an array?
+x = {"apple", "banana", "cherry"}
+
+#   Frozenset is a read-only set, I'd assume?
+x = frozenset({"apple", "banana", "cherry"})
+
+#   Bool:
+x = True
+
+#   Bytes:
+x = b"Hello"
+
+#   ByteArray:
+x = bytearray(5)
+
+#   MemoryView:
+x = memoryview(bytes(5))
+
+#   Ints and floats both have the same unlimited byte length,
+#   Float just can have decimal places, or powers, like:
+#   35 to the power of 10 and a 3 or something:
+x = 35e3
+y = 12E4
+z = -87.7e100
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+#   Complex numbers are written with a "j" as the imaginary part:
+#   Ah, that makes more sense.
+x = 3+5j
+y = 5j
+z = -5j
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+
+#convert from int to float:
+a = float(x)
+
+#convert from float to int:
+b = int(y)
+
+#convert from int to complex:
+c = complex(x)
+
+print(a)
+print(b)
+print(c)
+
+print(type(a))
+print(type(b))
+print(type(c))
+
+#   You cannot convert complex numbers into another number type.
+
+#   Don't forget to "import random" up top for this!
+print(random.randrange(1, 10))
