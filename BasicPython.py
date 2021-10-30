@@ -330,3 +330,35 @@ txt = "We are the so-called \"Vikings\" from the north."
 #   Check out the "String Methods" tab. There's index(), 
 #   find() (indexOf()), and more.
 
+a = 200
+b = 33
+
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
+  
+#   Huh, this prints "True" for both bec they exist, I guess.
+print(bool("Hello"))
+print(bool(15))
+
+#   Seems kind of like "Truthy" values in JS.
+#   "" is false, 0 is false, empty lists and dicts and things false
+#   Is "None" null in Python?
+
+def myFunction() :
+  return True
+
+print(myFunction())
+
+def myFunction() :
+  return True
+
+if myFunction():
+  print("YES!")
+else:
+  print("NO!")
+  
+x = 200
+print(isinstance(x, int))
+
